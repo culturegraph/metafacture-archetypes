@@ -1,4 +1,6 @@
 metafacture-archetypes
 ======================
 
-Maven archetypes for projects using Metafacture
+Maven archetypes for Metafacture-base projects:
+
+* `metafacture-plugin`: Archetype for metafacture plug-in packages.
