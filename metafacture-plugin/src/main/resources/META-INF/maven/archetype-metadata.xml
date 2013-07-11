@@ -51,7 +51,7 @@
     <fileSet filtered="true" encoding="UTF-8">
       <directory></directory>
       <includes>
-        <include>GET-STARTED.txt</include>
+        <include>GETTING-STARTED.txt</include>
       </includes>
     </fileSet>
     
