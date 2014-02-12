@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<!-- 
-		Copyright 2013 Deutsche Nationalbibliothek
+		Copyright 2014 Deutsche Nationalbibliothek
 
 		Licensed under the Apache License, Version 2.0 the "License";
 		you may not use this file except in compliance with the License.
@@ -17,37 +17,21 @@
 		limitations under the License.
 	-->
 
-	<groupId>org.culturegraph</groupId>
-	<artifactId>metafacture-archetypes</artifactId>
-	<version>0-SNAPSHOT</version>
-	<packaging>pom</packaging>
-	
-	<name>Metafacture Archetypes</name>
-	<description>Maven archetypes for Metafacture-base projects</description>
+	<groupId>org.culturegraph.archetypes</groupId>
+	<artifactId>metafacture-application</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>maven-archetype</packaging>
+
+	<name>Metafacture Application Archetype</name>
+	<description>Archetype for an application which uses Metafacture</description>
 	<url>https://github.com/culturegraph/metafacture-archetypes</url>
-	
+
 	<licenses>
 		<license>
 			<name>Apache License, Version 2.0</name>
 			<url>https://www.apache.org/licenses/LICENSE-2.0</url>
 		</license>
 	</licenses>
-
-	<developers>
-		<developer>
-			<id>cboehme</id>
-			<name>Christoph Böhme</name>
-			<email>c.boehme@dnb.de</email>
-			<url>https://github.com/cboehme</url>
-			<organization>Deutsche Nationalbibliothek</organization>
-			<organizationUrl>http://www.dnb.de</organizationUrl>
-			<roles>
-				<role>architect</role>
-				<role>developer</role>
-			</roles>
-			<timezone>+1</timezone>
-		</developer>
-	</developers>
 
 	<scm>
 		<connection>scm:git:git://github.com/culturegraph/metafacture-archetypes.git</connection>
@@ -75,39 +59,29 @@
 	</distributionManagement>
 
 	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>7</version>
+		<groupId>org.culturegraph</groupId>
+		<artifactId>metafacture-archetypes</artifactId>
+		<version>0-SNAPSHOT</version>
 	</parent>
 
-	<modules>
-		<module>metafacture-plugin</module>
-		<module>metafacture-application</module>
-	</modules>
-	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<artifactId>maven-archetype-plugin</artifactId>
-					<version>2.2</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-release-plugin</artifactId>
-					<version>2.4</version><!--$NO-MVN-MAN-VER$ -->
-					<!-- m2e complains about a different plugin version being specified in 
-						the parent pom. However, this is not actually problem for maven. So, we can 
-						ignore the warning. -->
-				</plugin>			
-			</plugins>
-		</pluginManagement>
-		
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.archetype</groupId>
+				<artifactId>archetype-packaging</artifactId>
+				<version>2.2</version>
+			</extension>
+		</extensions>
+
 		<plugins>
+			<plugin>
+				<artifactId>maven-archetype-plugin</artifactId>
+			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
@@ -172,5 +146,5 @@
 			</build>
 		</profile>
 	</profiles>
-	
+
 </project>

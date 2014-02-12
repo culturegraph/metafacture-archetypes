@@ -1,0 +1,9 @@
+Welcome to Metafacture!
+
+This information was read from a file and written to
+standard out using a Metafacture flow.
+
+For more information about Metfacture go to
+http://culturegraph.github.io/
+
+Happy coding!
