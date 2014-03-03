@@ -48,35 +48,13 @@
         <include>**/*.txt</include>
       </includes>
     </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
+    <fileSet filtered="false" encoding="UTF-8">
       <directory></directory>
       <includes>
-        <include>GETTING-STARTED.txt</include>
+        <include>GETTING-STARTED.md</include>
+        <include>LICENSE</include>
       </includes>
     </fileSet>
     
-    <!-- Eclipse specific files:
-    
-    <fileSet encoding="UTF-8">
-      <directory>.settings</directory>
-      <includes>
-        <include>**/*.prefs</include>
-      </includes>
-    </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
-      <directory></directory>
-      <includes>
-        <include>.classpath</include>
-        <include>.project</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8">
-      <directory></directory>
-      <includes>
-        <include>.checkstyle</include>
-        <include>.pmd</include>
-      </includes>
-    </fileSet>
-     -->
   </fileSets>
 </archetype-descriptor>
